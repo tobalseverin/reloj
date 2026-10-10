@@ -9,7 +9,7 @@
   --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
   --text-ui: 0.75rem;
   --text-body: 1rem;
-  --text-display: clamp(3rem, 14vw, 12rem);
+  --text-display: clamp(2rem, 11.5vw, 10rem);
   --tracking-ui: 0.08em;
 
   /* Spacing */

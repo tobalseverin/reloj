@@ -33,9 +33,9 @@ Listo cuando: se cambia de vista en el teléfono y en el escritorio, y `pnpm bui
 - [x] Nombre de la zona local debajo.
 Listo cuando: marca la hora correcta, se mueve con fluidez y se ve nítido en cualquier tamaño.
 
-### Etapa 3. Vista digital
-- [ ] `HH:MM:SS.mmm` con cifras tabulares, sin saltos de ancho.
-- [ ] Tamaño fluido según el viewport.
+### Etapa 3. Vista digital ✅
+- [x] `HH:MM:SS.mmm` con cifras tabulares, sin saltos de ancho.
+- [x] Tamaño fluido según el viewport.
 Listo cuando: las milésimas corren sin que el texto tiemble, en el teléfono y en el escritorio.
 
 ### Etapa 4. Comparador

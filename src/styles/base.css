@@ -111,6 +111,16 @@ body {
   stroke-width: 1;
 }
 
+/* Digital clock: monospace + tabular digits keep the width fixed */
+.digital {
+  font-family: var(--font-mono);
+  font-size: var(--text-display);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
 .view__sample {
   font-family: var(--font-mono);
   font-size: var(--text-display);
