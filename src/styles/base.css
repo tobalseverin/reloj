@@ -65,6 +65,61 @@ body {
   gap: var(--space-3);
 }
 
+/* Analog clock (stroke widths in viewBox units, scale with the clock) */
+.analog {
+  width: var(--clock-size);
+  height: auto;
+  display: block;
+  color: var(--color-ink);
+}
+
+.analog__ring {
+  fill: none;
+  stroke: var(--color-ink);
+  stroke-width: 1;
+}
+
+.analog__face {
+  stroke: currentColor;
+  stroke-linecap: butt;
+}
+
+.analog__face--inverse {
+  color: var(--color-paper);
+}
+
+.analog__tick {
+  stroke-width: 1;
+}
+
+.analog__tick--quarter {
+  stroke-width: 3;
+}
+
+.analog__hand--hour {
+  stroke-width: 4;
+}
+
+.analog__hand--minute {
+  stroke-width: 2;
+}
+
+.analog__pie-shape {
+  fill: none;
+  stroke-width: 90;
+  transform: rotate(-90deg);
+}
+
+.analog__pie {
+  stroke: var(--color-ink);
+}
+
+.analog__pivot {
+  fill: var(--color-paper);
+  stroke: var(--color-ink);
+  stroke-width: 1;
+}
+
 .view__sample {
   font-family: var(--font-mono);
   font-size: var(--text-display);

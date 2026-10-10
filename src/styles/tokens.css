@@ -23,6 +23,9 @@
   --stroke-thin: 1px;
   --stroke-bold: 2px;
 
+  /* Sizes */
+  --clock-size: min(80vmin, 36rem);
+
   /* Radii */
   --radius: 0;
 }

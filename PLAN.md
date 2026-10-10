@@ -28,9 +28,9 @@ Cada etapa termina en algo que se puede ver y probar.
 - [x] Un único loop de tiempo (`requestAnimationFrame`) que alimenta las vistas.
 Listo cuando: se cambia de vista en el teléfono y en el escritorio, y `pnpm build` genera un `dist/` estático que se puede subir.
 
-### Etapa 2. Vista analógica
-- [ ] Reloj en SVG: aro, marcas de las horas, agujas de horas y minutos, y un sector de torta para los segundos.
-- [ ] Nombre de la zona local debajo.
+### Etapa 2. Vista analógica ✅
+- [x] Reloj en SVG: aro, marcas de las horas, agujas de horas y minutos, y un sector de torta para los segundos.
+- [x] Nombre de la zona local debajo.
 Listo cuando: marca la hora correcta, se mueve con fluidez y se ve nítido en cualquier tamaño.
 
 ### Etapa 3. Vista digital
