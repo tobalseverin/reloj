@@ -27,7 +27,9 @@ Espaciado: `--space-1: 4px` · `--space-2: 8px` · `--space-3: 16px` · `--space
 
 Líneas: `--stroke-thin: 1px` · `--stroke-bold: 2px`
 
-Radios: `--radius: 0`. No hay esquinas redondeadas. El reloj no tiene aro: lo definen las marcas.
+Radios: `--radius: 0`. No hay esquinas redondeadas. Excepción: los controles circulares (switch de tema y color) usan `--radius-round: 50%`. El reloj no tiene aro: lo definen las marcas.
+
+Controles: `--control-size: 24px`, borde `--stroke-bold`. El switch de tema y el color comparten tamaño y borde.
 
 ## Componentes base
 - `ViewSwitcher`: tres etiquetas de texto (ANALÓGICO / DIGITAL / ZONAS). La activa va subrayada.
@@ -36,7 +38,7 @@ Radios: `--radius: 0`. No hay esquinas redondeadas. El reloj no tiene aro: lo de
 - `ZoneRow`: la ciudad, la hora, la diferencia y el botón ×.
 - `ZonePicker`: un input con autocompletado.
 - `ThemeSwitch`: un ícono de círculo medio lleno, a la izquierda del color.
-- `ColorPicker`: un `input type="color"` nativo con estilo mínimo.
+- `ColorPicker`: un `input type="color"` nativo dentro de un círculo de 24 px con borde de 2 px, igual al switch.
 - `FullscreenButton`
 
 ## Reglas

@@ -96,8 +96,8 @@ body {
 }
 
 .theme__icon {
-  width: var(--space-4);
-  height: var(--space-4);
+  width: var(--control-size);
+  height: var(--control-size);
   fill: none;
   stroke: currentColor;
   stroke-width: var(--stroke-bold);
@@ -110,10 +110,10 @@ body {
 
 .color {
   display: block;
-  width: var(--space-4);
-  height: var(--space-4);
-  border: var(--stroke-thin) solid var(--color-ink);
-  border-radius: var(--radius);
+  width: var(--control-size);
+  height: var(--control-size);
+  border: var(--stroke-bold) solid var(--color-ink);
+  border-radius: var(--radius-round);
   overflow: hidden;
   cursor: pointer;
 }

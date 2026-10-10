@@ -22,8 +22,8 @@ export function createThemeControl(): HTMLElement {
   button.className = 'theme'
   button.innerHTML = `
     <svg class="theme__icon" viewBox="0 0 24 24" aria-hidden="true">
-      <circle cx="12" cy="12" r="9" />
-      <path d="M12 3a9 9 0 0 1 0 18z" />
+      <circle cx="12" cy="12" r="11" />
+      <path d="M12 1a11 11 0 0 1 0 22z" />
     </svg>
   `
 

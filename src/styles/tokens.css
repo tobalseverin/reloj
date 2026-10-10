@@ -25,10 +25,12 @@
   --stroke-bold: 2px;
 
   /* Sizes */
+  --control-size: 24px;
   --clock-size: min(80vmin, 36rem, calc(100svh - 16rem));
 
   /* Radii */
   --radius: 0;
+  --radius-round: 50%; /* only for circular controls */
 }
 
 /* Dark theme: same two tokens, inverted. Set by src/ui/theme.ts. */
