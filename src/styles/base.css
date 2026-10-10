@@ -79,13 +79,10 @@ body {
   stroke-width: 1;
 }
 
-.analog__face {
-  stroke: currentColor;
+.analog__tick,
+.analog__hand {
+  stroke: var(--color-ink);
   stroke-linecap: butt;
-}
-
-.analog__face--inverse {
-  color: var(--color-paper);
 }
 
 .analog__tick {
@@ -104,14 +101,8 @@ body {
   stroke-width: 2;
 }
 
-.analog__pie-shape {
-  fill: none;
-  stroke-width: 90;
-  transform: rotate(-90deg);
-}
-
-.analog__pie {
-  stroke: var(--color-ink);
+.analog__hand--second {
+  stroke-width: 0.75;
 }
 
 .analog__pivot {

@@ -6,7 +6,7 @@ Es una pieza de portfolio personal: mínima, en blanco y negro, con un duotono o
 
 ## Primera versión
 Lo que tiene que funcionar para considerarla lista:
-- [ ] Vista analógica: muestra la hora local (zona del navegador) en un reloj redondo con un sector de "torta" para los segundos.
+- [ ] Vista analógica: muestra la hora local (zona del navegador) en un reloj redondo con agujas.
 - [ ] Vista digital: solo números, `HH:MM:SS.mmm`, con las milésimas en vivo.
 - [ ] Vista comparador: elegir varias zonas horarias y verlas lado a lado, con su diferencia respecto de la hora local.
 - [ ] Las zonas del comparador se guardan entre visitas.
@@ -29,7 +29,7 @@ Cada etapa termina en algo que se puede ver y probar.
 Listo cuando: se cambia de vista en el teléfono y en el escritorio, y `pnpm build` genera un `dist/` estático que se puede subir.
 
 ### Etapa 2. Vista analógica ✅
-- [x] Reloj en SVG: aro, marcas de las horas, agujas de horas y minutos, y un sector de torta para los segundos.
+- [x] Reloj en SVG: aro, marcas de las horas, agujas de horas, minutos y un segundero fino.
 - [x] Nombre de la zona local debajo.
 Listo cuando: marca la hora correcta, se mueve con fluidez y se ve nítido en cualquier tamaño.
 

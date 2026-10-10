@@ -30,7 +30,7 @@ Radios: `--radius: 0`. No hay esquinas redondeadas. El único círculo es el rel
 
 ## Componentes base
 - `ViewSwitcher`: tres etiquetas de texto (ANALÓGICO / DIGITAL / ZONAS). La activa va subrayada.
-- `AnalogClock`: un SVG con el aro, 12 marcas, las agujas y el sector de los segundos.
+- `AnalogClock`: un SVG con el aro, 12 marcas, las agujas de horas y minutos, y un segundero fino.
 - `DigitalClock`: un bloque de texto en monoespaciada.
 - `ZoneRow`: la ciudad, la hora, la diferencia y el botón ×.
 - `ZonePicker`: un input con autocompletado.
