@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: var(--stroke-thin) solid var(--color-ink);
+  outline-offset: var(--space-1);
+}
+
+#app {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: var(--space-3);
+}
+
+.label {
+  font-size: var(--text-ui);
+  letter-spacing: var(--tracking-ui);
+  text-transform: uppercase;
+}

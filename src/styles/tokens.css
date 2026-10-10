@@ -1,0 +1,28 @@
+/* Design tokens — source of truth: DISENO.md */
+:root {
+  /* Color: the only two colors in the system. Duotone overrides these at runtime. */
+  --color-paper: #ffffff;
+  --color-ink: #000000;
+
+  /* Typography */
+  --font-sans: system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+  --text-ui: 0.75rem;
+  --text-body: 1rem;
+  --text-display: clamp(3rem, 14vw, 12rem);
+  --tracking-ui: 0.08em;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 32px;
+  --space-5: 64px;
+
+  /* Lines */
+  --stroke-thin: 1px;
+  --stroke-bold: 2px;
+
+  /* Radii */
+  --radius: 0;
+}
