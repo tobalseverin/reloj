@@ -38,10 +38,10 @@ Listo cuando: marca la hora correcta, se mueve con fluidez y se ve nítido en cu
 - [x] Tamaño fluido según el viewport.
 Listo cuando: las milésimas corren sin que el texto tiemble, en el teléfono y en el escritorio.
 
-### Etapa 4. Comparador
-- [ ] Buscador de zonas (`Intl.supportedValuesOf('timeZone')`).
-- [ ] Una fila por zona con la ciudad, la hora y la diferencia respecto de la hora local (por ejemplo `+5 h`), y un botón para quitarla.
-- [ ] Persistencia en `localStorage`.
+### Etapa 4. Comparador ✅
+- [x] Buscador de zonas (`Intl.supportedValuesOf('timeZone')`).
+- [x] Una fila por zona con la ciudad, la hora y la diferencia respecto de la hora local (por ejemplo `+5 h`), y un botón para quitarla.
+- [x] Persistencia en `localStorage`.
 Listo cuando: agrego tres zonas, recargo la página y siguen ahí, con la hora correcta.
 
 ### Etapa 5. Duotono, pantalla completa y deploy
