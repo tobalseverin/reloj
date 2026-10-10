@@ -82,6 +82,32 @@ body {
   border-bottom-color: var(--color-ink);
 }
 
+.theme {
+  appearance: none;
+  display: grid;
+  place-items: center;
+  width: var(--space-4);
+  height: var(--space-4);
+  padding: 0;
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+}
+
+.theme__icon {
+  width: var(--space-4);
+  height: var(--space-4);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: var(--stroke-bold);
+}
+
+.theme__icon path {
+  fill: currentColor;
+  stroke: none;
+}
+
 .color {
   display: block;
   width: var(--space-4);
@@ -137,10 +163,16 @@ body {
   color: var(--color-ink);
 }
 
-.analog__ring {
-  fill: none;
-  stroke: var(--color-ink);
-  stroke-width: 1;
+.analog__caption {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-2);
+}
+
+.analog__digital {
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  line-height: 1;
 }
 
 .analog__tick,

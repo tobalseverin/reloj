@@ -3,6 +3,7 @@ import './styles/base.css'
 import { load, save } from './storage'
 import { createColorControl } from './ui/color'
 import { createFullscreenControl } from './ui/fullscreen'
+import { createThemeControl } from './ui/theme'
 import { createAnalogView } from './views/analog'
 import { createDigitalView } from './views/digital'
 import { createZonesView } from './views/zones'
@@ -20,7 +21,10 @@ const nav = app.querySelector<HTMLElement>('.switcher')!
 const stage = app.querySelector<HTMLElement>('.stage')!
 const controls = app.querySelector<HTMLElement>('.controls')!
 
-controls.append(createColorControl())
+const theme = createThemeControl()
+const color = createColorControl()
+color.prepend(theme)
+controls.append(color)
 const fullscreen = createFullscreenControl()
 if (fullscreen) controls.append(fullscreen)
 

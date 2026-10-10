@@ -1,8 +1,10 @@
 import { load, save } from '../storage'
+import { currentTheme } from './theme'
 
-// Duotone recipe from DISENO.md: same hue, light paper and dark ink (contrast well above AA).
-const PAPER = { s: 70, l: 92 }
-const INK = { s: 70, l: 14 }
+// Duotone recipe from DISENO.md: same hue, one light and one dark tone (contrast well above AA).
+// The dark theme swaps them: dark paper, light ink.
+const LIGHT = { s: 70, l: 92 }
+const DARK = { s: 70, l: 14 }
 
 function hexToHue(hex: string): number {
   const [r, g, b] = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255)
@@ -29,8 +31,9 @@ function apply(hue: number | null) {
     root.removeProperty('--color-paper')
     root.removeProperty('--color-ink')
   } else {
-    root.setProperty('--color-paper', `hsl(${hue} ${PAPER.s}% ${PAPER.l}%)`)
-    root.setProperty('--color-ink', `hsl(${hue} ${INK.s}% ${INK.l}%)`)
+    const [paper, ink] = currentTheme() === 'dark' ? [DARK, LIGHT] : [LIGHT, DARK]
+    root.setProperty('--color-paper', `hsl(${hue} ${paper.s}% ${paper.l}%)`)
+    root.setProperty('--color-ink', `hsl(${hue} ${ink.s}% ${ink.l}%)`)
   }
 }
 
@@ -56,6 +59,12 @@ export function createColorControl(): HTMLElement {
 
   input.addEventListener('input', () => set(hexToHue(input.value)))
   reset.addEventListener('click', () => set(null))
+
+  // Re-tint when the theme flips.
+  document.addEventListener('themechange', () => {
+    const hue = load<unknown>('hue', null)
+    apply(typeof hue === 'number' ? hue : null)
+  })
 
   const saved = load<unknown>('hue', null)
   set(typeof saved === 'number' ? saved : null)

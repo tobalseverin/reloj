@@ -1,8 +1,7 @@
-import { localZone, zoneCity } from '../time'
+import { formatHMS, localZone, zoneCity } from '../time'
 import type { View } from './view'
 
 // Geometry in viewBox units (viewBox is 200×200, centered on 0,0).
-const RING_RADIUS = 96
 const TICK_OUTER = 88
 const TICK_INNER = 78
 const HOUR_HAND = 48
@@ -23,20 +22,23 @@ export function createAnalogView(): View {
   el.className = 'view'
   el.innerHTML = `
     <svg class="analog" viewBox="-100 -100 200 200" role="img">
-      <circle class="analog__ring" r="${RING_RADIUS}" />
       ${ticks}
       <line class="analog__hand analog__hand--hour" x1="0" y1="0" x2="0" y2="${-HOUR_HAND}" />
       <line class="analog__hand analog__hand--minute" x1="0" y1="0" x2="0" y2="${-MINUTE_HAND}" />
       <line class="analog__hand analog__hand--second" x1="0" y1="${SECOND_TAIL}" x2="0" y2="${-SECOND_HAND}" />
       <circle class="analog__pivot" r="2.5" />
     </svg>
-    <p class="label">${zoneCity(localZone)}</p>
+    <div class="analog__caption">
+      <p class="analog__digital" aria-hidden="true"></p>
+      <p class="label">${zoneCity(localZone)}</p>
+    </div>
   `
 
   const svg = el.querySelector<SVGSVGElement>('svg')!
   const hourHand = el.querySelector<SVGLineElement>('.analog__hand--hour')!
   const minuteHand = el.querySelector<SVGLineElement>('.analog__hand--minute')!
   const secondHand = el.querySelector<SVGLineElement>('.analog__hand--second')!
+  const digital = el.querySelector<HTMLParagraphElement>('.analog__digital')!
 
   let lastLabel = ''
 
@@ -53,6 +55,9 @@ export function createAnalogView(): View {
       hourHand.setAttribute('transform', `rotate(${hours * 30})`)
       minuteHand.setAttribute('transform', `rotate(${minutes * 6})`)
       secondHand.setAttribute('transform', `rotate(${seconds * 6})`)
+
+      const hms = formatHMS(now)
+      if (digital.textContent !== hms) digital.textContent = hms
 
       const label = now.toLocaleTimeString('es', { hour: '2-digit', minute: '2-digit' })
       if (label !== lastLabel) {
