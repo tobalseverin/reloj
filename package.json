@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "typecheck": "tsc",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy:wonki": "./scripts/deploy.sh"
   },
   "devDependencies": {
     "typescript": "~6.0.2",
