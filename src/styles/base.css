@@ -27,7 +27,7 @@ body {
 #app {
   min-height: 100%;
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto 1fr auto;
   padding: var(--space-3);
 }
 
@@ -51,6 +51,70 @@ body {
 
 .switcher__item[aria-pressed='true'] {
   border-bottom-color: var(--color-ink);
+}
+
+/* Controls: color + fullscreen, quiet, at the bottom */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.controls__group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.controls__button {
+  appearance: none;
+  background: none;
+  border: 0;
+  border-bottom: var(--stroke-thin) solid transparent;
+  padding: var(--space-2) 0;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.controls__button[aria-pressed='true'] {
+  border-bottom-color: var(--color-ink);
+}
+
+.color {
+  display: block;
+  width: var(--space-4);
+  height: var(--space-4);
+  border: var(--stroke-thin) solid var(--color-ink);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.color:focus-within {
+  outline: var(--stroke-thin) solid var(--color-ink);
+  outline-offset: var(--space-1);
+}
+
+.color__input {
+  appearance: none;
+  display: block;
+  width: 200%;
+  height: 200%;
+  margin: -50%;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 /* Stage and views */

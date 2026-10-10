@@ -1,6 +1,8 @@
 import './styles/tokens.css'
 import './styles/base.css'
 import { load, save } from './storage'
+import { createColorControl } from './ui/color'
+import { createFullscreenControl } from './ui/fullscreen'
 import { createAnalogView } from './views/analog'
 import { createDigitalView } from './views/digital'
 import { createZonesView } from './views/zones'
@@ -12,9 +14,15 @@ const app = document.querySelector<HTMLDivElement>('#app')!
 app.innerHTML = `
   <nav class="switcher" aria-label="Vistas"></nav>
   <main class="stage"></main>
+  <footer class="controls"></footer>
 `
 const nav = app.querySelector<HTMLElement>('.switcher')!
 const stage = app.querySelector<HTMLElement>('.stage')!
+const controls = app.querySelector<HTMLElement>('.controls')!
+
+controls.append(createColorControl())
+const fullscreen = createFullscreenControl()
+if (fullscreen) controls.append(fullscreen)
 
 const buttons = views.map((view) => {
   const button = document.createElement('button')

@@ -12,7 +12,7 @@
 Color (los dos únicos colores del sistema):
 - `--color-paper: #ffffff` es el fondo.
 - `--color-ink: #000000` se usa en las líneas y el texto.
-- Duotono: a partir de un tono elegido (H), `--color-paper` pasa a `hsl(H 30% 96%)` y `--color-ink` a `hsl(H 60% 12%)`. Se verifica que el contraste sea AA o mayor.
+- Duotono: a partir de un tono elegido (H), `--color-paper` pasa a `hsl(H 70% 92%)` y `--color-ink` a `hsl(H 70% 14%)`. Se verifica que el contraste sea AA o mayor.
 
 Tipografía (del sistema, sin fuentes externas):
 - `--font-sans: system-ui, -apple-system, "Helvetica Neue", sans-serif`

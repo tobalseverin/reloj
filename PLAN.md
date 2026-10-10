@@ -11,7 +11,7 @@ Lo que tiene que funcionar para considerarla lista:
 - [ ] Vista comparador: elegir varias zonas horarias y verlas lado a lado, con su diferencia respecto de la hora local.
 - [ ] Las zonas del comparador se guardan entre visitas.
 - [ ] Pantalla completa en cualquier vista.
-- [ ] Selector de color: convierte el blanco y negro en un duotono del color elegido.
+- [x] Selector de color: convierte el blanco y negro en un duotono del color elegido.
 
 ## Fuera de alcance
 - Alarmas, cronómetro y temporizador.
@@ -45,7 +45,7 @@ Listo cuando: las milésimas corren sin que el texto tiemble, en el teléfono y 
 Listo cuando: agrego tres zonas, recargo la página y siguen ahí, con la hora correcta.
 
 ### Etapa 5. Duotono, pantalla completa y deploy
-- [ ] Selector de color que recalcula `--color-ink` y `--color-paper` y se guarda.
-- [ ] Botón de pantalla completa (Fullscreen API) y su atajo `F`.
+- [x] Selector de color que recalcula `--color-ink` y `--color-paper` y se guarda.
+- [x] Botón de pantalla completa (Fullscreen API) y su atajo `F`.
 - [ ] Deploy a wonki.
 Listo cuando: el sitio está en línea en el dominio final, con el duotono y la pantalla completa funcionando.
