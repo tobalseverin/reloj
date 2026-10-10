@@ -39,8 +39,8 @@ No hay.
 
 ## Deploy
 - Destino: servidor propio **wonki** (`ssh cs@wonki.p113.io`), usuario de Vesta **cs**.
-- Dominio: **reloj.wrdo.art** (A CONFIRMAR, junto con si ya existe en Vesta).
-- Es un sitio estático, así que no hace falta PM2. Se sube `dist/` con rsync a `/home/cs/web/reloj.wrdo.art/public_html/`.
+- Dominio: **reloj.wrdowrdo.art** (A CONFIRMAR, junto con si ya existe en Vesta).
+- Es un sitio estático, así que no hace falta PM2. Se sube `dist/` con rsync a `/home/cs/web/reloj.wrdowrdo.art/public_html/`.
 - Antes del primer deploy se revisan las convenciones de los proyectos que ya existen bajo `cs` en wonki.
 - Para verificar: el `curl -I` devuelve 200, el sitio carga en el navegador y los archivos quedan a nombre de `cs`.
 
