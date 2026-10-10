@@ -49,3 +49,9 @@ Listo cuando: agrego tres zonas, recargo la página y siguen ahí, con la hora c
 - [x] Botón de pantalla completa (Fullscreen API) y su atajo `F`.
 - [x] Deploy a wonki.
 Listo cuando: el sitio está en línea en el dominio final, con el duotono y la pantalla completa funcionando.
+
+## Para retomar
+- La primera versión está publicada en http://reloj.wrdowrdo.art (rama `feat/etapa-5`).
+- Falta: activar SSL con Let's Encrypt en Vesta (usuario `cristobal`) y probar la pantalla completa en un navegador real.
+- Falta: abrir un PR de `feat/etapa-5` a `main` y mergearlo.
+- Próximo paso: activar SSL en el panel de Vesta y abrir el PR.
