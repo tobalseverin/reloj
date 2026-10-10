@@ -6,11 +6,11 @@ Es una pieza de portfolio personal: mínima, en blanco y negro, con un duotono o
 
 ## Primera versión
 Lo que tiene que funcionar para considerarla lista:
-- [ ] Vista analógica: muestra la hora local (zona del navegador) en un reloj redondo con agujas.
-- [ ] Vista digital: solo números, `HH:MM:SS.mmm`, con las milésimas en vivo.
-- [ ] Vista comparador: elegir varias zonas horarias y verlas lado a lado, con su diferencia respecto de la hora local.
-- [ ] Las zonas del comparador se guardan entre visitas.
-- [ ] Pantalla completa en cualquier vista.
+- [x] Vista analógica: muestra la hora local (zona del navegador) en un reloj redondo con agujas.
+- [x] Vista digital: solo números, `HH:MM:SS.mmm`, con las milésimas en vivo.
+- [x] Vista comparador: elegir varias zonas horarias y verlas lado a lado, con su diferencia respecto de la hora local.
+- [x] Las zonas del comparador se guardan entre visitas.
+- [x] Pantalla completa en cualquier vista.
 - [x] Selector de color: convierte el blanco y negro en un duotono del color elegido.
 
 ## Fuera de alcance
@@ -44,8 +44,8 @@ Listo cuando: las milésimas corren sin que el texto tiemble, en el teléfono y 
 - [x] Persistencia en `localStorage`.
 Listo cuando: agrego tres zonas, recargo la página y siguen ahí, con la hora correcta.
 
-### Etapa 5. Duotono, pantalla completa y deploy
+### Etapa 5. Duotono, pantalla completa y deploy ✅
 - [x] Selector de color que recalcula `--color-ink` y `--color-paper` y se guarda.
 - [x] Botón de pantalla completa (Fullscreen API) y su atajo `F`.
-- [ ] Deploy a wonki.
+- [x] Deploy a wonki.
 Listo cuando: el sitio está en línea en el dominio final, con el duotono y la pantalla completa funcionando.
