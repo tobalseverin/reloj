@@ -27,8 +27,48 @@ body {
 #app {
   min-height: 100%;
   display: grid;
-  place-items: center;
+  grid-template-rows: auto 1fr;
   padding: var(--space-3);
+}
+
+/* View switcher */
+.switcher {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.switcher__item {
+  appearance: none;
+  background: none;
+  border: 0;
+  border-bottom: var(--stroke-thin) solid transparent;
+  padding: var(--space-2) 0;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.switcher__item[aria-pressed='true'] {
+  border-bottom-color: var(--color-ink);
+}
+
+/* Stage and views */
+.stage {
+  display: grid;
+  place-items: center;
+}
+
+.view {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+}
+
+.view__sample {
+  font-family: var(--font-mono);
+  font-size: var(--text-display);
+  line-height: 1;
 }
 
 .label {

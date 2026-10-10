@@ -22,10 +22,10 @@ Lo que tiene que funcionar para considerarla lista:
 ## Etapas
 Cada etapa termina en algo que se puede ver y probar.
 
-### Etapa 1. Esqueleto navegable
-- [ ] Proyecto Vite + TypeScript con el archivo de tokens.
-- [ ] Selector de las tres vistas, cada una con contenido de ejemplo.
-- [ ] Un único loop de tiempo (`requestAnimationFrame`) que alimenta las vistas.
+### Etapa 1. Esqueleto navegable ✅
+- [x] Proyecto Vite + TypeScript con el archivo de tokens.
+- [x] Selector de las tres vistas, cada una con contenido de ejemplo.
+- [x] Un único loop de tiempo (`requestAnimationFrame`) que alimenta las vistas.
 Listo cuando: se cambia de vista en el teléfono y en el escritorio, y `pnpm build` genera un `dist/` estático que se puede subir.
 
 ### Etapa 2. Vista analógica
