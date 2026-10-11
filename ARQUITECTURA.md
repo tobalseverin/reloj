@@ -42,6 +42,8 @@ No hay.
 - Dominio: **reloj.wrdowrdo.art** (DNS en Gandi → 212.129.3.54).
 - Es un sitio estático, así que no hace falta PM2. Se sube `dist/` con rsync a `/home/cristobal/web/reloj.wrdowrdo.art/public_html/`.
 - Antes del primer deploy se revisan las convenciones de los proyectos que ya existen en wonki.
+- Método: `pnpm deploy:wonki` (`scripts/deploy.sh`). Antes de pisar, copia la versión actual a `/home/cristobal/releases/reloj.wrdowrdo.art/<fecha-hora>` y conserva las últimas 3. Sube como `cristobal`.
+- Rollback: `sudo -u cristobal rsync -a --delete /home/cristobal/releases/reloj.wrdowrdo.art/<fecha-hora>/ /home/cristobal/web/reloj.wrdowrdo.art/public_html/`
 - Para verificar: el `curl -I` devuelve 200, el sitio carga en el navegador y los archivos quedan a nombre de `cristobal`.
 
 ## Decisiones
@@ -50,3 +52,7 @@ No hay.
 - **SVG para el analógico:** es nítido en cualquier tamaño y se puede estilar con los tokens. Canvas habría sido más fácil de animar, pero no aprovecha el CSS.
 - **localStorage para guardar:** no hay usuarios, así que un backend sobra. La contra es que las zonas no se sincronizan entre dispositivos.
 - **Una sola URL:** el usuario no pidió una ruta por vista. Se recuerda la última vista abierta.
+
+## Historial de deploys
+- 2026-10-10 · `402014a` (rama `feat/etapa-5`) · wonki / cristobal / reloj.wrdowrdo.art — primera versión
+- 2026-10-10 · `1c62437` (`main`, PR #1) · wonki / cristobal / reloj.wrdowrdo.art — tema claro/oscuro, reloj sin aro, tokens del reloj
