@@ -18,7 +18,8 @@ Color (los dos únicos colores del sistema):
 Tipografía (del sistema, sin fuentes externas):
 - `--font-sans: system-ui, -apple-system, "Helvetica Neue", sans-serif`
 - `--font-mono: ui-monospace, "SF Mono", Menlo, monospace`
-- `--text-ui: 0.75rem` para la interfaz, en mayúsculas y con `letter-spacing: 0.08em`.
+- `--text-ui: 0.75rem` para la interfaz, en mayúsculas y con `--tracking-ui: 0.08em`.
+- `--tracking-display: -0.02em` para la vista digital.
 - `--text-body: 1rem`
 - `--text-display: clamp(3rem, 14vw, 12rem)` para la vista digital.
 - Todos los números llevan `font-variant-numeric: tabular-nums`.
@@ -28,6 +29,11 @@ Espaciado: `--space-1: 4px` · `--space-2: 8px` · `--space-3: 16px` · `--space
 Líneas: `--stroke-thin: 1px` · `--stroke-bold: 2px`
 
 Radios: `--radius: 0`. No hay esquinas redondeadas. Excepción: los controles circulares (switch de tema y color) usan `--radius-round: 50%`. El reloj no tiene aro: lo definen las marcas.
+
+Reloj (en unidades del viewBox de 200 × 200, se escalan con el reloj):
+- Largos: `--clock-tick-outer: 88` · `--clock-tick-inner: 78` · `--clock-hand-hour: 48` · `--clock-hand-minute: 74` · `--clock-hand-second: 84` · `--clock-hand-second-tail: 14` · `--clock-pivot: 2.5`
+- Grosores: `--clock-stroke-tick: 1` · `--clock-stroke-tick-quarter: 3` · `--clock-stroke-hour: 4` · `--clock-stroke-minute: 2` · `--clock-stroke-second: 0.75` · `--clock-stroke-pivot: 1`
+- En Penpot son `clock.*`; los grosores de cada tablero se derivan con `clock.<ancho>.stroke.*` = token base × `clock.scale.<ancho>` (tamaño del reloj / 200).
 
 Controles: `--control-size: 24px`, borde `--stroke-bold`. El switch de tema y el color comparten tamaño y borde.
 

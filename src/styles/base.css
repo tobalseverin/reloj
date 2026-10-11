@@ -182,29 +182,29 @@ body {
 }
 
 .analog__tick {
-  stroke-width: 1;
+  stroke-width: var(--clock-stroke-tick);
 }
 
 .analog__tick--quarter {
-  stroke-width: 3;
+  stroke-width: var(--clock-stroke-tick-quarter);
 }
 
 .analog__hand--hour {
-  stroke-width: 4;
+  stroke-width: var(--clock-stroke-hour);
 }
 
 .analog__hand--minute {
-  stroke-width: 2;
+  stroke-width: var(--clock-stroke-minute);
 }
 
 .analog__hand--second {
-  stroke-width: 0.75;
+  stroke-width: var(--clock-stroke-second);
 }
 
 .analog__pivot {
   fill: var(--color-paper);
   stroke: var(--color-ink);
-  stroke-width: 1;
+  stroke-width: var(--clock-stroke-pivot);
 }
 
 /* Digital clock: monospace + tabular digits keep the width fixed */
@@ -213,7 +213,7 @@ body {
   font-size: var(--text-display);
   font-weight: 300;
   line-height: 1;
-  letter-spacing: -0.02em;
+  letter-spacing: var(--tracking-display);
   white-space: nowrap;
 }
 
