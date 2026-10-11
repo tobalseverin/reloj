@@ -27,8 +27,285 @@ body {
 #app {
   min-height: 100%;
   display: grid;
-  place-items: center;
+  grid-template-rows: auto 1fr auto;
   padding: var(--space-3);
+}
+
+/* View switcher */
+.switcher {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.switcher__item {
+  appearance: none;
+  background: none;
+  border: 0;
+  border-bottom: var(--stroke-thin) solid transparent;
+  padding: var(--space-2) 0;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.switcher__item[aria-pressed='true'] {
+  border-bottom-color: var(--color-ink);
+}
+
+/* Controls: color + fullscreen, quiet, at the bottom */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.controls__group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.controls__button {
+  appearance: none;
+  background: none;
+  border: 0;
+  border-bottom: var(--stroke-thin) solid transparent;
+  padding: var(--space-2) 0;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.controls__button[aria-pressed='true'] {
+  border-bottom-color: var(--color-ink);
+}
+
+.theme {
+  appearance: none;
+  display: grid;
+  place-items: center;
+  width: var(--space-4);
+  height: var(--space-4);
+  padding: 0;
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+}
+
+.theme__icon {
+  width: var(--control-size);
+  height: var(--control-size);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: var(--stroke-bold);
+}
+
+.theme__icon path {
+  fill: currentColor;
+  stroke: none;
+}
+
+.color {
+  display: block;
+  width: var(--control-size);
+  height: var(--control-size);
+  border: var(--stroke-bold) solid var(--color-ink);
+  border-radius: var(--radius-round);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.color:focus-within {
+  outline: var(--stroke-thin) solid var(--color-ink);
+  outline-offset: var(--space-1);
+}
+
+.color__input {
+  appearance: none;
+  display: block;
+  width: 200%;
+  height: 200%;
+  margin: -50%;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Stage and views */
+.stage {
+  display: grid;
+  place-items: center;
+}
+
+.view {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+}
+
+/* Analog clock (stroke widths in viewBox units, scale with the clock) */
+.analog {
+  width: var(--clock-size);
+  height: auto;
+  display: block;
+  color: var(--color-ink);
+}
+
+.analog__caption {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-2);
+}
+
+.analog__digital {
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  line-height: 1;
+}
+
+.analog__tick,
+.analog__hand {
+  stroke: var(--color-ink);
+  stroke-linecap: butt;
+}
+
+.analog__tick {
+  stroke-width: var(--clock-stroke-tick);
+}
+
+.analog__tick--quarter {
+  stroke-width: var(--clock-stroke-tick-quarter);
+}
+
+.analog__hand--hour {
+  stroke-width: var(--clock-stroke-hour);
+}
+
+.analog__hand--minute {
+  stroke-width: var(--clock-stroke-minute);
+}
+
+.analog__hand--second {
+  stroke-width: var(--clock-stroke-second);
+}
+
+.analog__pivot {
+  fill: var(--color-paper);
+  stroke: var(--color-ink);
+  stroke-width: var(--clock-stroke-pivot);
+}
+
+/* Digital clock: monospace + tabular digits keep the width fixed */
+.digital {
+  font-family: var(--font-mono);
+  font-size: var(--text-display);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: var(--tracking-display);
+  white-space: nowrap;
+}
+
+/* Zones comparator */
+.zones {
+  width: min(100%, 40rem);
+  justify-items: stretch;
+  gap: var(--space-4);
+}
+
+.zones__add {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.zones__input {
+  appearance: none;
+  width: 100%;
+  padding: var(--space-2) 0;
+  border: 0;
+  border-bottom: var(--stroke-thin) solid var(--color-ink);
+  border-radius: var(--radius);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}
+
+.zones__input::placeholder {
+  color: inherit;
+  opacity: 0.4;
+}
+
+.zones__input:focus-visible {
+  outline: none;
+  border-bottom-width: var(--stroke-bold);
+}
+
+.zones__list {
+  list-style: none;
+  padding: 0;
+  border-top: var(--stroke-thin) solid var(--color-ink);
+}
+
+.zones__row {
+  display: grid;
+  grid-template-columns: 1fr auto auto var(--space-4);
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: var(--stroke-thin) solid var(--color-ink);
+}
+
+.zones__place {
+  display: grid;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.zones__city {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.zones__time {
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+}
+
+.zones__remove {
+  appearance: none;
+  justify-self: end;
+  background: none;
+  border: 0;
+  padding: var(--space-1) var(--space-2);
+  color: inherit;
+  font: inherit;
+  font-size: var(--text-lg);
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 30rem) {
+  .zones__row {
+    grid-template-columns: 1fr auto var(--space-4);
+    grid-template-areas: 'place time remove' 'diff diff diff';
+    row-gap: var(--space-1);
+  }
+  .zones__place { grid-area: place; }
+  .zones__time { grid-area: time; }
+  .zones__remove { grid-area: remove; }
+  .zones__diff { grid-area: diff; }
 }
 
 .label {

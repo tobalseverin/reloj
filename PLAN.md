@@ -6,12 +6,12 @@ Es una pieza de portfolio personal: mínima, en blanco y negro, con un duotono o
 
 ## Primera versión
 Lo que tiene que funcionar para considerarla lista:
-- [ ] Vista analógica: muestra la hora local (zona del navegador) en un reloj redondo con un sector de "torta" para los segundos.
-- [ ] Vista digital: solo números, `HH:MM:SS.mmm`, con las milésimas en vivo.
-- [ ] Vista comparador: elegir varias zonas horarias y verlas lado a lado, con su diferencia respecto de la hora local.
-- [ ] Las zonas del comparador se guardan entre visitas.
-- [ ] Pantalla completa en cualquier vista.
-- [ ] Selector de color: convierte el blanco y negro en un duotono del color elegido.
+- [x] Vista analógica: muestra la hora local (zona del navegador) en un reloj redondo con agujas.
+- [x] Vista digital: solo números, `HH:MM:SS.mmm`, con las milésimas en vivo.
+- [x] Vista comparador: elegir varias zonas horarias y verlas lado a lado, con su diferencia respecto de la hora local.
+- [x] Las zonas del comparador se guardan entre visitas.
+- [x] Pantalla completa en cualquier vista.
+- [x] Selector de color: convierte el blanco y negro en un duotono del color elegido.
 
 ## Fuera de alcance
 - Alarmas, cronómetro y temporizador.
@@ -22,30 +22,36 @@ Lo que tiene que funcionar para considerarla lista:
 ## Etapas
 Cada etapa termina en algo que se puede ver y probar.
 
-### Etapa 1. Esqueleto navegable
-- [ ] Proyecto Vite + TypeScript con el archivo de tokens.
-- [ ] Selector de las tres vistas, cada una con contenido de ejemplo.
-- [ ] Un único loop de tiempo (`requestAnimationFrame`) que alimenta las vistas.
+### Etapa 1. Esqueleto navegable ✅
+- [x] Proyecto Vite + TypeScript con el archivo de tokens.
+- [x] Selector de las tres vistas, cada una con contenido de ejemplo.
+- [x] Un único loop de tiempo (`requestAnimationFrame`) que alimenta las vistas.
 Listo cuando: se cambia de vista en el teléfono y en el escritorio, y `pnpm build` genera un `dist/` estático que se puede subir.
 
-### Etapa 2. Vista analógica
-- [ ] Reloj en SVG: aro, marcas de las horas, agujas de horas y minutos, y un sector de torta para los segundos.
-- [ ] Nombre de la zona local debajo.
+### Etapa 2. Vista analógica ✅
+- [x] Reloj en SVG: aro, marcas de las horas, agujas de horas, minutos y un segundero fino.
+- [x] Nombre de la zona local debajo.
 Listo cuando: marca la hora correcta, se mueve con fluidez y se ve nítido en cualquier tamaño.
 
-### Etapa 3. Vista digital
-- [ ] `HH:MM:SS.mmm` con cifras tabulares, sin saltos de ancho.
-- [ ] Tamaño fluido según el viewport.
+### Etapa 3. Vista digital ✅
+- [x] `HH:MM:SS.mmm` con cifras tabulares, sin saltos de ancho.
+- [x] Tamaño fluido según el viewport.
 Listo cuando: las milésimas corren sin que el texto tiemble, en el teléfono y en el escritorio.
 
-### Etapa 4. Comparador
-- [ ] Buscador de zonas (`Intl.supportedValuesOf('timeZone')`).
-- [ ] Una fila por zona con la ciudad, la hora y la diferencia respecto de la hora local (por ejemplo `+5 h`), y un botón para quitarla.
-- [ ] Persistencia en `localStorage`.
+### Etapa 4. Comparador ✅
+- [x] Buscador de zonas (`Intl.supportedValuesOf('timeZone')`).
+- [x] Una fila por zona con la ciudad, la hora y la diferencia respecto de la hora local (por ejemplo `+5 h`), y un botón para quitarla.
+- [x] Persistencia en `localStorage`.
 Listo cuando: agrego tres zonas, recargo la página y siguen ahí, con la hora correcta.
 
-### Etapa 5. Duotono, pantalla completa y deploy
-- [ ] Selector de color que recalcula `--color-ink` y `--color-paper` y se guarda.
-- [ ] Botón de pantalla completa (Fullscreen API) y su atajo `F`.
-- [ ] Deploy a wonki.
+### Etapa 5. Duotono, pantalla completa y deploy ✅
+- [x] Selector de color que recalcula `--color-ink` y `--color-paper` y se guarda.
+- [x] Botón de pantalla completa (Fullscreen API) y su atajo `F`.
+- [x] Deploy a wonki.
 Listo cuando: el sitio está en línea en el dominio final, con el duotono y la pantalla completa funcionando.
+
+## Para retomar
+- La primera versión está publicada en http://reloj.wrdowrdo.art (rama `feat/etapa-5`).
+- Falta: activar SSL con Let's Encrypt en Vesta (usuario `cristobal`) y probar la pantalla completa en un navegador real.
+- Falta: abrir un PR de `feat/etapa-5` a `main` y mergearlo.
+- Próximo paso: activar SSL en el panel de Vesta y abrir el PR.

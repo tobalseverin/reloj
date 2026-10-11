@@ -17,4 +17,4 @@ Leé primero `PLAN.md`, `DISENO.md` y `ARQUITECTURA.md`. Son la fuente de verdad
 - Lo que se guarda va en `localStorage` con el prefijo `reloj.` y pasa por `src/storage.ts`.
 - Se respeta `prefers-reduced-motion`.
 - No hay backend, dependencias de runtime ni fuentes externas.
-- Deploy: estático a wonki, usuario de Vesta `cs`, dominio `reloj.wrdo.art`. El dominio todavía no existe en Vesta: crearlo requiere la confirmación del usuario.
+- Deploy: estático a wonki, usuario de Vesta `cristobal`, dominio `reloj.wrdowrdo.art` (IP 212.129.3.54).
